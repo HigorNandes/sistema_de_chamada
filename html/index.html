@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Cadastro</title>
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <br>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+            <br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+            <br>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+            <br>
+            <label for="urgencia">Urgencia:</label>
+            <select name="urgencia" id="urgencia" required>
+                <option value="poucoUrgente">Pouco Urgente</option>
+                <option value="urgente">Urgente</option>
+                <option value="muitoUrgente">Muito Urgente</option>
+            </select>
+            <br>
+            <button type="submit" id="enviar">Cadastar</button>
+        </form>
+
+        <div class="container">
+            <button id="proximo">Chamar Próximo</button>
+            <button id="verLista">Ver Lista</button>
+        
+            <div id="listaEspera">
+            </div>
+        </div>
+</body>
+</html>
