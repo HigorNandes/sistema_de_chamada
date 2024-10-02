@@ -43,8 +43,12 @@ btnCadstro.addEventListener("click", function(e){
 });
 
 btnProximo.addEventListener("click",function(){
+
+    let pega_sala = document.querySelector("#sala");
+    let sala = pega_sala.value;
+
     if(lista[0] != null){
-        window.alert(`Paciente ${lista[0].nome} ${lista[0].sobrenome} \n sala: 03`);
+        window.alert(`Paciente ${lista[0].nome} ${lista[0].sobrenome} \n sala: ${sala} `);
     } else {
         alert("Lista Vazia");
     }
@@ -54,13 +58,16 @@ btnProximo.addEventListener("click",function(){
 let listaEspera = document.querySelector("#listaEspera");
 
 btnLista.addEventListener("click", function(){
-    listaEspera.innerHTML = '';
-    lista.forEach((lista, index) => {
+    if(lista[0] != null){
+        listaEspera.innerHTML = '';
+        lista.forEach((lista, index) => {
         const li = document.createElement('li');
         li.textContent = `${index + 1}. ${lista.nome} - ${lista.sobrenome}`;
         listaEspera.appendChild(li);
-    });
-
+        });
+    } else {
+        window.alert("Lista de pacientes vazia");
+    }
 });
 
 
